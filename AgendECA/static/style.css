@@ -1,0 +1,33 @@
+body{
+  background-color: #808073;
+  text-align: center;
+}
+button{
+  font-size: 40px;
+  width: 400px;
+}
+#adc {
+  background-color: rgb(80,100,180);
+  padding: 50px;
+  margin-top: 50px;
+}
+
+#rev {
+  background-color: rgb(80,100,180);
+  padding: 50px;
+  margin-top: 20px;
+}
+
+#mos {
+  background-color: rgb(80,100,180);
+  padding: 50px;
+  margin-top: 20px;
+  
+}
+
+#alt {
+  background-color: rgb(80,100,180);
+  padding: 50px;
+  margin-top: 20px;
+  
+}
