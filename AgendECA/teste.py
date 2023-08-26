@@ -1,11 +1,11 @@
+from doctest import debug
 from flask import *
-import time
 app = Flask(__name__)
 @app.route("/")
 def hello():
   return render_template("index.html")
 
-@app.route("/", methods = ["POST"])
+@app.route("/", methods = ["POST", "GET"])
 def login():
   if request.method == "POST":
     nome = request.form.get("nome")
@@ -21,16 +21,21 @@ def home():
     return render_template("home.html")
     
     
-@app.route("/buda", methods = ["POST", "GET"])
+@app.route("/adicionar", methods = ["POST", "GET"])
 def adicionar():
   nome = request.form.get("nome")
   telefone = request.form.get("numero")
   txt = open("arquivo.txt", "a")
-  info = "."
   if request.method == "POST":
     txt.write(f"nome: {nome}, telefone: {telefone}\n")
     txt.close()
-    info = "Cadastro realizado com sucesso"
-    return redirect(url_for("home"))
-  return render_template("Buda.html", info=info)
-app.run()
+    return redirect(url_for("sucesso")) 
+  return render_template("adicionar.html")
+
+@app.route("/sucesso", methods = ["POST", "GET"])
+def sucesso():
+  return render_template("sucesso.html")
+
+
+if  __name__ == "__main__":
+  app.run(debug=True)
