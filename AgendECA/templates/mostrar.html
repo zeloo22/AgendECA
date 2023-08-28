@@ -6,13 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Parabens salvamento realizado com sucesso!!</h1>
+    <h1>Dados registrados: </h1>
+    {% for i in dados %}
+    <p>{{  i  }}</p>
+    {% endfor %}
     <form action="/home">
-        <button type="submit">Voltar</button>
+        <button type="submit">Voltar </button>
     </form>
-    <form action="/mostrar">
-        <button type="submit">Mostrar</button>
-    </form>
-    
 </body>
 </html>

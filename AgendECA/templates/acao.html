@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./static/acaosty.css">
+</head>
+<body>
+    <h1>Bem vindo ao menu {{ acao }} </h1>
+    <form method="POST">
+        <p>Nome: <input type="text" id="nome" name="nome"></p>
+        <p>Telefone: <input type="text" id="numero" name="numero"></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <form action="/home">
+        <button type="submit">Voltar</button>
+    </form>
+    <div>
+        <h2>Dados registrados: </h2>
+        {% for i in dados %}
+        <h3>{{  i  }}</h3>
+        {% endfor %}
+    </div>
+</body>
+</html>

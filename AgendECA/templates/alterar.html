@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bem vindo ao menu alterar:</h1>
+    <form method="POST">
+        <p>Fale o nome que quer alterar: <input type="text" id="nome" name="nome"></p>
+        <p>Fale o novo nome: <input type="text" id="nomet" name="nomet"></p>
+        <p>Fale o numero que quer alterar: <input type="text" id="numero" name="numero"></p>
+        <p>Fale o novo numero: <input type="text" id="numerot" name="numerot"></p>
+        <button type="submit">Enviar</button>
+    </form>
+    <form action="/home">
+        <button type="submit">Voltar</button>
+    </form>
+    <p>Dados registrados:</p>
+    {%for i in dados%}
+    <p>{{  i  }}</p>
+    {%  endfor  %}
+    
+
+</body>
+</html>
